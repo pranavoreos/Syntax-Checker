@@ -66,6 +66,9 @@ GenStack<temp>::~GenStack(){
 
 template <class temp>
 void GenStack<temp>::push(temp data){
+  if(isFull()){
+    increaseSize();
+  }
   myArray[++top] = data;
 }
 
@@ -85,11 +88,7 @@ temp GenStack<temp>::peek(){
 
 template <class temp>
 bool GenStack<temp>::isFull(){
-  if(isFull()){
-    cout << "stack is full" << endl;
-    return '\0';
-  }
-  return (top = mSize-1);
+  return (top == mSize-1);
 }
 
 template <class temp>
@@ -102,18 +101,14 @@ int GenStack<temp>::getSize(){
   return top + 1;
 }
 
+//doubles the size 
 template <class temp>
 void GenStack<temp>::increaseSize(){
-  newArray = new temp[mSize];
-
-  for (int i = top; i > -1; --i){
-    newArray[i] = myArray[i];
+  temp *tempArray = myArray;
+  myArray = new temp[mSize * 2];
+  for(int i = 0; i< mSize; ++i){
+    myArray[i] = tempArray[i];
   }
-
-  mSize += 1;
-  myArray = new temp[mSize];
-
-  for (int i = top; i > -1; --i) {
-      myArray[i] = newArray[i];
-  }
+  mSize *= 2;
+  delete tempArray;
 }
