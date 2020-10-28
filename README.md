@@ -10,7 +10,7 @@ A program that uses a stack to analyze source code written in any language and r
 3.) None that I am aware of
 
 4.) Eli Annoni Helped me through Slack 
-    Joseph Sneifer
-https://www.cplusplus.com/files/tutorial.pdf https://stackoverflow.com/
+    /Joseph Sneifer
+https://www.cplusplus.com/files/tutorial.pdf/ https://stackoverflow.com/
 
 5.) None
