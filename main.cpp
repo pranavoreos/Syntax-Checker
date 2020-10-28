@@ -13,7 +13,7 @@ using namespace std;
 int main (int argc, char** argv){
 
   //Creates a stack of 10 chars
-  GenStack <char> myStack(10);
+  GenStack <char> myStack(20);
 
   bool repeat = true;
 
