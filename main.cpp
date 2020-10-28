@@ -12,8 +12,8 @@ using namespace std;
 
 int main (int argc, char** argv){
 
-  //Creates a stack of 20 chars
-  GenStack <char> myStack(20);
+  //Creates a stack of chars
+  GenStack <char> myStack;
 
   bool repeat = true;
 
